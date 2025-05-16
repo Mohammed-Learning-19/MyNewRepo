@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <script>
+        const quotes = [
+            "Believe in Yourself.",
+            "You are stronger than you think.",
+            "Every day is a new beginning.",
+            "Do what makes your soul shine.",
+            "Push yourself, no one else will."
+        ];
+
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[randomIndex];
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-purple-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center max-w-md">
+        <h2 class="text-xl font-bold mb-4 text-purple-700">Random Quote</h2>
+        <p id="quote" class="text-gray-700 italic mb-4">Click the button to get inspired</p>
+        <button onclick="newQuote()" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">
+            New Quote
+        </button>  
+    </div>
+</body>
+</html>
